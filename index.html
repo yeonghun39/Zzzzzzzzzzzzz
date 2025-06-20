@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>제트아카데미</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333;}
+    header {position: fixed; width: 100%; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 1000;}
+    nav {display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem;}
+    nav a {margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: bold;}
+    .hero {height: 100vh; background: linear-gradient(to bottom right, #003366, #006699); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+    .hero h1 {font-size: 3rem; animation: fadeIn 1.5s ease;}
+    .hero p {margin-top: 1rem; font-size: 1.2rem;}
+    section {padding: 4rem 2rem; max-width: 1200px; margin: auto;}
+    .curriculum, .gallery {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;}
+    .card {padding: 2rem; background: #f9f9f9; border-radius: 10px; transition: transform 0.3s;}
+    .card:hover {transform: translateY(-5px);}
+    .gallery img {width: 100%; border-radius: 10px;}
+    .contact {text-align: center;}
+    .contact a {display: inline-block; margin-top: 1rem; padding: 1rem 2rem; background: #003366; color: white; border-radius: 8px; text-decoration: none;}
+    footer {background: #f1f1f1; padding: 2rem; text-align: center; font-size: 0.9rem; color: #666;}
+    .slider {position: relative; overflow: hidden;}
+    .slides {display: flex; transition: transform 1s ease-in-out;}
+    .slides img {width: 100%; flex-shrink: 0; border-radius: 10px;}
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    html {scroll-behavior: smooth;}
+  </style>
+</head>
+<body>
+  
+<header>
+  <nav>
+    <div><img src="academy_images/logo.png" alt="제트학원 로고" style="height:50px; padding: 5px 0;"></div>
+    <div class="dropdown">
+      <button class="dropbtn">메뉴 ☰</button>
+      <div class="dropdown-content">
+        <a href="#about">소개</a>
+        <a href="#curriculum">커리큘럼</a>
+        <a href="#gallery">갤러리</a>
+        <a href="#location">오시는 길</a>
+        <a href="#contact">문의</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropbtn {
+    background-color: #003366;
+    color: white;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
+
+  <div class="hero" style="background: url('academy_images/hero.jpg') center/cover no-repeat; position: relative;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1;"></div>
+    <div style="position: relative; z-index: 2; padding: 2rem; text-align: center; color: white;">
+
+    <h1>제트아카데미에 오신 것을 환영합니다</h1>
+    <p>당신의 미래를 위한 최고의 교육 파트너</p>
+  </div></div>
+
+  <section id="about">
+    <h2>학원 소개</h2>
+    <p>제트아카데미는 수년간의 노하우를 바탕으로 학생들의 실력을 성장시키는 교육 전문기관입니다.</p>
+  </section>
+
+  <section id="curriculum">
+    <h2>커리큘럼</h2>
+    <div class="curriculum">
+      <div class="card"><h3>국어</h3><p>논리적 사고와 독해력을 기릅니다.</p></div>
+      <div class="card"><h3>수학</h3><p>개념부터 심화까지 철저히 관리합니다.</p></div>
+      <div class="card"><h3>영어</h3><p>문법, 독해, 듣기를 체계적으로 학습합니다.</p></div>
+      <div class="card"><h3>과학</h3><p>탐구 중심 학습으로 과학적 사고를 기릅니다.</p></div>
+    </div>
+  </section>
+
+  <section id="gallery">
+  <h2>갤러리</h2>
+  <div class="slider" id="slider">
+  <div class="slides" id="slides">
+
+    <div style="min-width:100%; box-sizing:border-box; padding: 0 1rem; text-align:center;">
+      <img src="academy_images/gallery1.jpg" alt="Gallery Image 1" style="width:100%; border-radius: 10px;"/>
+      <p style="margin-top: 0.5rem; font-size: 1rem; color: #555;">최신식 강의실 전경 - 깔끔하고 집중도 높은 환경</p>
+    </div>
+    
+    <div style="min-width:100%; box-sizing:border-box; padding: 0 1rem; text-align:center;">
+      <img src="academy_images/gallery2.jpg" alt="Gallery Image 2" style="width:100%; border-radius: 10px;"/>
+      <p style="margin-top: 0.5rem; font-size: 1rem; color: #555;">넓은 대형 강의실 - 쾌적한 수업 공간 제공</p>
+    </div>
+    
+    <div style="min-width:100%; box-sizing:border-box; padding: 0 1rem; text-align:center;">
+      <img src="academy_images/gallery3.jpg" alt="Gallery Image 3" style="width:100%; border-radius: 10px;"/>
+      <p style="margin-top: 0.5rem; font-size: 1rem; color: #555;">소수정예 강의실 - 개별 집중 학습 최적화</p>
+    </div>
+    
+    <div style="min-width:100%; box-sizing:border-box; padding: 0 1rem; text-align:center;">
+      <img src="academy_images/gallery4.jpg" alt="Gallery Image 4" style="width:100%; border-radius: 10px;"/>
+      <p style="margin-top: 0.5rem; font-size: 1rem; color: #555;">자습실 공간 - 조용하고 집중력 높은 분위기</p>
+    </div>
+    
+  </div>
+</div>
+</section>
+
+<section id="location">
+  <h2>오시는 길</h2>
+  <p>서울특별시 강남구 학원로 123 제트빌딩 5층</p>
+  <div style="width:100%; max-width:100%; height:400px; margin-top:1rem;">
+    <iframe src="https://map.naver.com/p/search/%EC%A0%9C%ED%8A%B8%ED%95%99%EC%9B%90?c=14128570.2158235,4518144.4589854,15,0,0,0,dh" 
+            style="width:100%; height:100%; border:none;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+
+  <section id="contact" class="contact">
+    <h2>상담 및 문의</h2>
+    <p>언제든지 문의주세요. 친절하게 상담해드립니다.</p>
+    <a href="tel:01012345678">📞 010-1234-5678</a>
+  </section>
+
+  <footer>
+    &copy; 2025 제트아카데미. All rights reserved.
+  </footer>
+
+  <script>
+    const slides = document.getElementById('slides');
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % 4;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  </script>
+</body>
+</html>
